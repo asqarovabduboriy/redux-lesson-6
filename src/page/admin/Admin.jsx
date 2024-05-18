@@ -14,6 +14,12 @@ const Admin = () => {
             <Link to="createproducts">
               <h5>Create Product</h5>
             </Link>
+            <Link to="mangeuser">
+              <h5>Mange User</h5>
+            </Link>
+            <Link to="createusers">
+              <h5>Create User</h5>
+            </Link>
           </div>
         </div>
       </div>
