@@ -1,0 +1,125 @@
+.card{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3{
+    text-align: center; 
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+
+}
+
+.card:hover{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.card_flex_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.sidebar{
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: -20px;
+}
+
+.sidebar__menu{
+    list-style: none;
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 50px;
+}
+
+.sidebar__menu a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar__menu h5{
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+}
+
+.sidebar__menu h5:hover{
+    color: #333;
+    background-color: #fff;
+}
+
+.row{
+   margin: 0 auto;
+}
+
+.admin{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+}
+
+.btn__delete{
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn__delete:hover{
+    background-color: #fff;
+    color: red;
+    border: 1px solid red;
+}
+
+.form__create{
+    width: 50%;
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;    
+    margin: 0 auto;
+    margin-top:40px;
+}
+
+.form__create input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    outline: none;
+    width:100%;
+}
+
+.form__create button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    width: 20%;
+    margin: 0 auto;
+}
