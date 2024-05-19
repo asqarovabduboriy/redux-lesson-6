@@ -1,6 +1,5 @@
 .card{
     width: 300px;
-    height: 300px;
     margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
@@ -128,5 +127,42 @@
     display: flex;
     justify-content: center;
     align-items: center
+}
+
+.btn__edit{
+    background-color: #0ff72a;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn__edit:active{
+    background-color: #fff;
+    color: #0ff72a;
+    border: 1px solid #0ff72a;
+}
+
+.card_info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.card_info h3{
+    font-size: 1.2rem;
+    color:lightblue;
+}
+
+.card p{
+    text-align: left;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: larger;
+}
+
+.btn__delete{
+    margin-left:0px ;
 }
 

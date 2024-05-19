@@ -24,8 +24,17 @@ export const productApi = productapi.injectEndpoints({
         body: product,
       }),
       invalidatesTags: ["Product"],
-    })
+    }),
+    // Update request
+    editProduct: build.mutation({
+      query: ({ id, body }) => ({
+        url: `/products/${id}`,
+        method: "PUT",
+        body,
+      }),
+      invalidatesTags: ["Product"],
+    }),
   }),
 });
 
-export const { useGetProductsQuery, useDeleteProductMutation,useCreateProductMutation } = productApi;
+export const { useGetProductsQuery, useDeleteProductMutation,useCreateProductMutation,useEditProductMutation } = productApi;
