@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDeleteUserMutation } from "../../context/user";
 import { toast } from "react-toastify";
+import EditModal from "../edit-modal/EditModal";
 
 const UserWrapper = ({ data, isadmin }) => {
-    const [deleteUser] = useDeleteUserMutation();
+  const [deleteUser] = useDeleteUserMutation();
+  const [show, setShow] = useState(null);
   const handleDelete = (id) => {
     deleteUser(id);
     toast.success(`User Deleted with id ${id}`);
@@ -21,7 +23,18 @@ const UserWrapper = ({ data, isadmin }) => {
       <h3>{el.lastname}</h3>
       <h3>{el.age}</h3>
 
-      {isadmin ? <button onClick={() => handleDelete(el.id)} className="btn__delete">Delete</button> : <></>}
+      {isadmin ? (
+        <>
+          <button onClick={() => handleDelete(el.id)} className="btn__delete">
+            Delete
+          </button>
+          <button onClick={() => setShow(el)} className="btn__edit">
+            Edit
+          </button>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   ));
   return (
@@ -29,6 +42,7 @@ const UserWrapper = ({ data, isadmin }) => {
       <div className="container">
         <div className="card_flex_wrapper">{usres}</div>
       </div>
+      {show ? <EditModal show={show} setShow={setShow} /> : <></>}
     </>
   );
 };

@@ -27,10 +27,10 @@ export const userApi = userapi.injectEndpoints({
     }),
     // Update request
     editUser: build.mutation({
-      query: (users) => ({
-        url: `/users/${users.id}`,
+      query: ({ id, body }) => ({
+        url: `/users/${id}`,
         method: "PUT",
-        body: users,
+        body,
       }),
       invalidatesTags: ["User"],
     }),
